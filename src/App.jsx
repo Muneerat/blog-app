@@ -5,6 +5,7 @@ import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 import SinglePost from "./pages/SinglePost";
 import { Feedback } from "./pages/Feedback";
+import { Anecdotes } from "./pages/anecdotes";
 
 const todoRouter = () => {
   return (
@@ -59,6 +60,7 @@ const todoRouter = () => {
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/feedback" element={<Feedback/>} />
+          <Route path="/anecdotes" element={<Anecdotes/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
