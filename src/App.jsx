@@ -4,6 +4,7 @@ import CreateTodo from "./pages/CreateTodo";
 import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 import SinglePost from "./pages/SinglePost";
+import { Feedback } from "./pages/Feedback";
 
 const todoRouter = () => {
   return (
@@ -38,6 +39,15 @@ const todoRouter = () => {
                 New Todo
               </Link>
             </li>
+            <li>
+              <Link
+                to="/feedback"
+                title="Add"
+                className="py-4 block px-3 hover:underline transition ease-in-out duration-200"
+              >
+              Feedback
+              </Link>
+            </li>
           </ul>
         </div>
         <Routes>
@@ -48,6 +58,7 @@ const todoRouter = () => {
             <Route path="create" element={<CreateTodo />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="/feedback" element={<Feedback/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
